@@ -3,123 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glitch Art - Home</title>
+  <title>Art 74 Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
+
   <style>
     body {
+      background-image: url('IMG_4201.jpg');
+      background-position: center center;
+      background-size: cover;
       font-family: 'Butterfly Kids', cursive;
+      font-size: 22px;
       margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
+      min-height: 100vh;
     }
 
-    /* Navbar container */
+    /* ===== NAVBAR ===== */
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #dcd0ff;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      background-color: rgba(255, 182, 193, 0.9);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
-    /* Navbar links */
-    .navbar a {
-      text-decoration: none;
-      color: #333;
-      padding: 10px 15px;
-      display: block;
+    .navbar-brand {
       font-weight: bold;
+      color: #333 !important;
+      cursor: default; /* Non-clickable */
     }
 
-    /* Dropdown container */
-    .dropdown {
-      position: relative;
+    .navbar a.nav-link {
+      color: #333 !important;
+      font-size: 1.2em;
+      border-radius: 8px;
+      transition: none; /* Remove hover effect */
+    }
+
+    .dropdown-menu a.dropdown-item {
+      color: #333;
+      transition: none; /* Remove hover effect */
+    }
+
+    .dropdown-menu a.dropdown-item:hover {
+      background-color: transparent; /* Keep hover neutral */
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: Plum;
+      color: #333;
+      padding: 20px 30px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    p {
+      background-color: PowderBlue;
+      color: #333;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 20px;
+      margin-bottom: 30px;
       display: inline-block;
     }
 
-    /* Dropdown content (hidden by default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #dcd0ff;
-      min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      overflow: hidden;
-      z-index: 1001;
+    .clickable-image {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      object-fit: cover;
+      height: 160px;
+      margin-bottom: 8px;
     }
 
-    .dropdown-content a {
-      padding: 10px 15px;
-      display: block;
+    .clickable-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .image-label {
+      font-weight: bold;
       color: #333;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #c0aaff;
-    }
-
-    /* Show the dropdown on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Hamburger menu for small screens */
-    .hamburger {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #dcd0ff;
-      }
-
-      .navbar-links.active {
-        display: flex;
-      }
-
-      .dropdown-content {
-        position: relative;
-      }
-
-      .hamburger {
-        display: block;
-      }
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="logo"><a href="index.html">Glitch Art</a></div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="navbar-links">
-      <a href="gallery.html">Gallery</a>
-      <div class="dropdown">
-        <a href="#">Categories ▼</a>
-        <div class="dropdown-content">
-          <a href="cats.html">Cats</a>
-          <a href="dogs.html">Dogs</a>
-          <a href="abstract.html">Abstract</a>
-        </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <span class="navbar-brand">Art 74 Portfolio</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <!-- Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Portfolio
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+              <li><a class="dropdown-item" href="glitchart.html">Glitch Art</a></li>
+              <li><a class="dropdown-item" href="logo design.html">Logo</a></li>
+              <li><a class="dropdown-item" href="meme.html">Meme</a></li>
+              <li><a class="dropdown-item" href="virtual.html">Virtual Space</a></li>
+              <li><a class="dropdown-item" href="3d.html">3D Render</a></li>
+              <li><a class="dropdown-item" href="netart.html">Net Art</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <script>
-    function toggleMenu() {
-      const navbarLinks = document.querySelector('.navbar-links');
-      navbarLinks.classList.toggle('active');
-    }
-  </script>
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+    <h1>Welcome to my portfolio!</h1>
+    <p>Click on the images to view each project</p>
+
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="glitchart.html">
+            <img src="bigcatcaracal.jpg" alt="Glitch1" class="clickable-image">
+          </a>
+          <div class="image-label">Glitch Art (1/3)</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="glitchart.html">
+            <img src="bigcatlion copyglitch.png" alt="Glitch2" class="clickable-image">
+          </a>
+          <div class="image-label">Glitch Art (2/3)</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="glitchart.html">
+            <img src="bigcattiger.jpg" alt="Glitch3" class="clickable-image">
+          </a>
+          <div class="image-label">Glitch Art (3/3)</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="logo design.html">
+            <img src="logo design.png" alt="Logo" class="clickable-image">
+          </a>
+          <div class="image-label">Logo Design</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="meme.html">
+            <img src="mememashupfinal.png" alt="Meme" class="clickable-image">
+          </a>
+          <div class="image-label">Meme Mashup</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="virtual.html">
+            <img src="Screenshot 2025-10-27 225555.png" alt="Virtual" class="clickable-image">
+          </a>
+          <div class="image-label">Virtual Space</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="3d.html">
+            <img src="art74desk.jpg" alt="3D Render" class="clickable-image">
+          </a>
+          <div class="image-label">3D Render</div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="netart.html">
+            <img src="cashier maddie.png" alt="Net Art" class="clickable-image">
+          </a>
+          <div class="image-label">Net Art</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
