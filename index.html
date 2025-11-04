@@ -24,6 +24,7 @@
       min-height: 100vh;
     }
 
+    /* ===== NAVBAR (simple style like 3D page) ===== */
     .navbar {
       background-color: rgba(255, 182, 193, 0.9);
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -33,14 +34,16 @@
       color: #333 !important;
       font-size: 1.2em;
       border-radius: 8px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
     }
 
-    .navbar a.nav-link:hover {
-      background-color: Plum;
-      transform: scale(1.05);
+    .navbar-brand {
+      font-weight: bold;
+      color: #333 !important;
+      font-size: 1.6em;
     }
 
+    /* ===== CONTENT ===== */
     .content {
       background-color: rgba(255, 255, 255, 0.85);
       padding: 25px;
@@ -75,15 +78,9 @@
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       object-fit: cover;
       height: 160px;
       margin-bottom: 8px;
-    }
-
-    .clickable-image:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .image-label {
@@ -95,10 +92,10 @@
 </head>
 <body>
 
-  <!-- ===== Bootstrap Navbar ===== -->
+  <!-- ===== NAVBAR (simple) ===== -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="font-weight:bold; color:#333;">Art 74 Portfolio</a>
+      <a class="navbar-brand" href="index.html">Art 74 Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
