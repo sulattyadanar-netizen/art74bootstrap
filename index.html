@@ -24,7 +24,7 @@
       min-height: 100vh;
     }
 
-    /* ===== NAVBAR (simple style like 3D page) ===== */
+    /* ===== NAVBAR ===== */
     .navbar {
       background-color: rgba(255, 182, 193, 0.9);
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -35,6 +35,16 @@
       font-size: 1.2em;
       border-radius: 8px;
       text-decoration: none;
+      background-color: transparent !important; /* remove hover background */
+      transition: none !important; /* remove all transitions */
+    }
+
+    .navbar a.nav-link:hover,
+    .navbar a.nav-link:focus,
+    .navbar a.nav-link:active {
+      background-color: transparent !important;
+      transform: none !important;
+      box-shadow: none !important;
     }
 
     .navbar-brand {
@@ -43,7 +53,7 @@
       font-size: 1.6em;
     }
 
-    /* ===== CONTENT ===== */
+    /* ===== MAIN CONTENT ===== */
     .content {
       background-color: rgba(255, 255, 255, 0.85);
       padding: 25px;
@@ -78,9 +88,15 @@
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       object-fit: cover;
       height: 160px;
       margin-bottom: 8px;
+    }
+
+    .clickable-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .image-label {
@@ -92,7 +108,7 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR (simple) ===== -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Art 74 Portfolio</a>
