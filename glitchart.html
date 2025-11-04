@@ -24,9 +24,9 @@
       min-height: 100vh;
     }
 
-    /* ===== NAVBAR STYLING ===== */
+    /* ===== NAVBAR ===== */
     .navbar {
-      background-color: rgba(255, 182, 193, 0.9); /* Light pink */
+      background-color: rgba(255, 182, 193, 0.9);
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
@@ -40,15 +40,10 @@
       color: #333 !important;
       font-size: 1.2em;
       border-radius: 8px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
     }
 
-    .navbar a.nav-link:hover {
-      background-color: Plum;
-      transform: scale(1.05);
-    }
-
-    /* ===== CONTENT AREA ===== */
+    /* ===== CONTENT ===== */
     .content {
       background-color: rgba(255, 255, 255, 0.85);
       padding: 30px;
@@ -72,13 +67,9 @@
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       margin-bottom: 25px;
-    }
-
-    img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      /* Remove hover scaling/shadow */
+      transition: none;
     }
 
     /* ===== PARAGRAPH SECTION ===== */
@@ -99,7 +90,14 @@
       font-weight: bold;
       border-radius: 8px;
       padding: 10px 20px;
-      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-custom:focus,
+    .btn-custom:active {
+      outline: none;
+      box-shadow: none;
     }
   </style>
 </head>
