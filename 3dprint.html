@@ -36,11 +36,25 @@
       font-size: 1.6em;
     }
 
-    .navbar a.nav-link {
+    /* ===== EVENLY SPACED NAV ITEMS ===== */
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-around; /* evenly spaces out links */
+      align-items: center;
+    }
+
+    .navbar-nav li {
+      list-style: none;
+    }
+
+    .navbar-nav a.nav-link, .navbar-nav a.dropdown-item {
+      padding: 10px 15px; /* adds clickable space */
+      text-align: center;
       color: #333 !important;
       font-size: 1.2em;
-      border-radius: 8px;
       text-decoration: none;
+      border-radius: 8px;
     }
 
     /* ===== CONTENT ===== */
@@ -120,11 +134,11 @@
             <li><a class="dropdown-item" href="virtual.html">Virtual Space</a></li>
             <li><a class="dropdown-item" href="3d.html">3D Render</a></li>
             <li><a class="dropdown-item" href="netart.html">Net Art</a></li>
-            <li><a class="dropdown-item" href="3dprint.html">3d print</a></li>
+            <li><a class="dropdown-item" href="3dprint.html">3D Print</a></li>
             <li><a class="dropdown-item" href="diyphotoshop.html">Diy Photoshop</a></li>
             <li><a class="dropdown-item" href="game.html">Interactive game</a></li>
             <li><a class="dropdown-item" href="selfportrait.html">Self Portrait</a></li>
-            <li><a class="dropdown-item" href="makeupgame.html">Clawdeen Makeover</a></li>
+            <li><a class="dropdown-item" href="makeupgame.html">Final</a></li>
         </ul>
       </div>
     </div>
@@ -133,7 +147,7 @@
   <!-- ===== MAIN CONTENT ===== -->
   <div class="container d-flex justify-content-center align-items-center">
     <div class="content mt-4">
-      <h1>3d print</h1>
+      <h1>3D Print</h1>
 
       <div class="row g-4 justify-content-center mt-3">
         <div class="col-12 col-md-10">
