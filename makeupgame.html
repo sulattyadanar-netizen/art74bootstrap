@@ -36,13 +36,27 @@
       font-size: 1.6em;
     }
 
-    .navbar a.nav-link {
-      color: #333 !important;
-      font-size: 1.2em;
-      border-radius: 8px;
-      text-decoration: none;
+    /* ===== EVENLY SPACED NAV ITEMS ===== */
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-around; /* evenly spaces out links */
+      align-items: center;
     }
 
+    .navbar-nav li {
+      list-style: none;
+    }
+
+    .navbar-nav a.nav-link, .navbar-nav a.dropdown-item {
+      padding: 10px 15px; /* adds clickable space */
+      text-align: center;
+      color: #333 !important;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    
     /* ===== CONTENT ===== */
     .content {
       background-color: rgba(255, 255, 255, 0.85);
@@ -110,10 +124,10 @@
 
 <body>
 
-   <!-- ===== Bootstrap Navbar ===== -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="font-weight:bold; color:#333;">Art 74 Portfolio</a>
+      <a class="navbar-brand" href="index.html">Art 74 Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -126,11 +140,11 @@
             <li><a class="dropdown-item" href="virtual.html">Virtual Space</a></li>
             <li><a class="dropdown-item" href="3d.html">3D Render</a></li>
             <li><a class="dropdown-item" href="netart.html">Net Art</a></li>
-            <li><a class="dropdown-item" href="3dprint.html">3d print</a></li>
+            <li><a class="dropdown-item" href="3dprint.html">3D Print</a></li>
             <li><a class="dropdown-item" href="diyphotoshop.html">Diy Photoshop</a></li>
             <li><a class="dropdown-item" href="game.html">Interactive game</a></li>
             <li><a class="dropdown-item" href="selfportrait.html">Self Portrait</a></li>
-            <li><a class="dropdown-item" href="makeupgame.html">Final-Clawdeen Makeover</a></li>
+            <li><a class="dropdown-item" href="makeupgame.html">Final</a></li>
         </ul>
       </div>
     </div>
@@ -153,7 +167,7 @@
       <!-- ===== PARAGRAPH SECTION ===== -->
       <div class="description mt-4">
         <p>
-          Monster High makeup game created using Github. 
+          This is a Monster High makeup game created using Github for my final project. 
           In this game, the players will be giving Clawdeen Wolf a makeover for a party.
           I used procreate on my ipad to draw all the makeup, products, hair and art. 
           Click on the image to play the game!
