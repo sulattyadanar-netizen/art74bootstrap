@@ -24,6 +24,7 @@
       min-height: 100vh;
     }
 
+    /* ===== NAVBAR ===== */
     .navbar {
       background-color: rgba(255, 182, 193, 0.9);
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -33,6 +34,13 @@
       font-weight: bold;
       color: #333 !important;
       font-size: 1.6em;
+    }
+
+    .navbar a.nav-link {
+      color: #333 !important;
+      font-size: 1.2em;
+      border-radius: 8px;
+      text-decoration: none;
     }
 
     .content {
@@ -106,6 +114,25 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Art 74 Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li><a class="dropdown-item" href="glitchart.html">Glitch Art</a></li>
+            <li><a class="dropdown-item" href="logo design.html">Logo</a></li>
+            <li><a class="dropdown-item" href="meme.html">Meme</a></li>
+            <li><a class="dropdown-item" href="virtual.html">Virtual Space</a></li>
+            <li><a class="dropdown-item" href="3d.html">3D Render</a></li>
+            <li><a class="dropdown-item" href="netart.html">Net Art</a></li>
+            <li><a class="dropdown-item" href="3dprint.html">3d print</a></li>
+            <li><a class="dropdown-item" href="diyphotoshop.html">Diy Photoshop</a></li>
+            <li><a class="dropdown-item" href="game.html">Interactive game</a></li>
+            <li><a class="dropdown-item" href="selfportrait.html">Self Portrait</a></li>
+            <li><a class="dropdown-item" href="makeupgame.html">Final-Clawdeen Makeover</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -113,12 +140,6 @@
   <div class="container d-flex justify-content-center align-items-center">
     <div class="content mt-4">
       <h1>Diy Photoshop</h1>
-
-      <div class="row g-4 justify-content-center mt-3">
-        <div class="col-12 col-md-10">
-          <img src="diyphotoshop.png" alt="diy photoshop" class="img-fluid">
-        </div>
-      </div>
 
       <!-- ===== P5.JS IFRAME ===== -->
       <iframe 
