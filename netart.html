@@ -36,11 +36,25 @@
       font-size: 1.6em;
     }
 
-    .navbar a.nav-link {
+    /* ===== EVENLY SPACED NAV ITEMS ===== */
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-around; /* evenly spaces out links */
+      align-items: center;
+    }
+
+    .navbar-nav li {
+      list-style: none;
+    }
+
+    .navbar-nav a.nav-link, .navbar-nav a.dropdown-item {
+      padding: 10px 15px; /* adds clickable space */
+      text-align: center;
       color: #333 !important;
       font-size: 1.2em;
-      border-radius: 8px;
       text-decoration: none;
+      border-radius: 8px;
     }
 
     /* ===== CONTENT ===== */
@@ -110,23 +124,27 @@
 
 <body>
 
-   <!-- ===== Bootstrap Navbar ===== -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="font-weight:bold; color:#333;">Art 74 Portfolio</a>
+      <a class="navbar-brand" href="index.html">Art 74 Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="glitchart.html">Glitch Art</a></li>
-          <li class="nav-item"><a class="nav-link" href="logo design.html">Logo</a></li>
-          <li class="nav-item"><a class="nav-link" href="meme.html">Meme</a></li>
-          <li class="nav-item"><a class="nav-link" href="virtual.html">Virtual Space</a></li>
-          <li class="nav-item"><a class="nav-link" href="3d.html">3D Render</a></li>
-          <li class="nav-item"><a class="nav-link" href="netart.html">Net Art</a></li>
+            <li><a class="dropdown-item" href="glitchart.html">Glitch Art</a></li>
+            <li><a class="dropdown-item" href="logo design.html">Logo</a></li>
+            <li><a class="dropdown-item" href="meme.html">Meme</a></li>
+            <li><a class="dropdown-item" href="virtual.html">Virtual Space</a></li>
+            <li><a class="dropdown-item" href="3d.html">3D Render</a></li>
+            <li><a class="dropdown-item" href="netart.html">Net Art</a></li>
+            <li><a class="dropdown-item" href="3dprint.html">3D Print</a></li>
+            <li><a class="dropdown-item" href="diyphotoshop.html">Diy Photoshop</a></li>
+            <li><a class="dropdown-item" href="game.html">Interactive game</a></li>
+            <li><a class="dropdown-item" href="selfportrait.html">Self Portrait</a></li>
+            <li><a class="dropdown-item" href="makeupgame.html">Final</a></li>
         </ul>
       </div>
     </div>
@@ -149,7 +167,10 @@
       <!-- ===== PARAGRAPH SECTION ===== -->
       <div class="description mt-4">
         <p>
-          Wonderland themed Cafe experience using github. Click on the image to visit the site.
+          This is a Wonderland themed Cafe experience using github.
+          For this project, I wanted to do something related to one of my favorite shows Ever After High. 
+          I made an online experience of a cafe/hat shop ran by Maddie Hatter from the show.
+          Click on the image to visit the site.
         </p>
       </div>
 
